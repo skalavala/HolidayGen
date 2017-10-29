@@ -1,4 +1,4 @@
-# List of Holidays as JSON
+# List of Holidays as JSON (Holiday List/JSON Generator)
 
 This code generates holidays list of various countries and types in a simple and easy to access JSON format. The codebase is easy to extend and add holidays of other countries.
 
