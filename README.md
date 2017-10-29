@@ -1,10 +1,14 @@
-# Holiday Generator
+# List of Holidays as JSON
 
-This code generates various holidays in a JSON format. The codebase is easy to extend and add holidays of other countries.
+This code generates holidays list of various countries and types in a simple and easy to access JSON format. The codebase is easy to extend and add holidays of other countries.
+
+One advantage of having a JSON is once fully populated, and uploaded to GitHub, it can be accessed using simple HTTP Get, adnd the information can be parsed to meet your needs easily.
 
 The output of this project would look like this --> https://raw.githubusercontent.com/skalavala/smarthome/master/holidays.json
 
-The code is extensible, and you can add other country's holidays just as easily. Please follow the simple steps to get started.
+In my Home Assistant (Home Automation software), I have a `Rest` based sensor that queries every 12 hours to find out if the current day is a public holiday or not. If it is, it automatically does some announcements, and does various things... I simply use the JSON in my repo to query and no need to host it o any server as long as there is a way to access the URL over the web, you are in business!
+
+The code is highly extensible, and you can add other country's holidays just as easily.  Please follow the simple steps to get started.
 
 ## Development Environment
 * You need Visual Studio or VSCode that supports C# and Microsoft .Net runtime
