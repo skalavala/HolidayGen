@@ -47,14 +47,15 @@ namespace HolidayGen
         private readonly static string HOLIDAY_PACKAGE = "UK_HOLIDAYS";
 
         // Static names... add more hard coded names, so that you have one place to modify later
-        private readonly static string HOLIDAY_QUEENS_BIRTHDAY = "Queen's Birthday!";
-		private readonly static string HOLIDAY_MOTHERSDAY = "Mother's Day!";
+	private readonly static string HOLIDAY_MOTHERSDAY = "Mother's Day!";
 
+        // required method - defined as abstract in base class
         protected override string GetName()
         {
             return HOLIDAY_PACKAGE;
         }
 
+        // required method - defined as abstract in base class
         protected override Dictionary<string, string> PopulateStaticHolidays()
         {
             Dictionary<string, string> staticHolidays = new Dictionary<string, string>(16);
@@ -66,6 +67,7 @@ namespace HolidayGen
             return staticHolidays;
         }
 
+        // required method - defined as abstract in the base class 
         protected override Dictionary<string, string> PopulateDynamicHolidays()
         {
             Dictionary<string, string> dynamicHolidays = new Dictionary<string, string>(16);
@@ -81,11 +83,9 @@ namespace HolidayGen
 
             return dynamicHolidays;
         }
-
-        /// <summary>
-        /// Populate Victoria Day
-        /// </summary>
-        /// <returns></returns>
+	
+	// Code to populate victoria day - it it not static, changes every year, and hence additional logic
+	// Usually occurs Last Monday preceding May 25. If it falls on the 25, go back to previous Monday
         private Dictionary<string, string> PolulateVictoriaDay()
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
@@ -100,7 +100,6 @@ namespace HolidayGen
                 }
 
                 DateTime lastMonday = date.AddDays(-offset);
-
                 dict.Add(lastMonday.Month + "/" + lastMonday.Day + "/" + lastMonday.Year, HOLIDAY_VICTORIADAY);
             }
             return dict;
