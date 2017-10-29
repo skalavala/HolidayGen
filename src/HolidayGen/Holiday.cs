@@ -20,6 +20,8 @@ namespace HolidayGen
         public readonly static string STATIC = "static";
         public readonly static string DYNAMIC = "dynamic";
 
+        public readonly static int NUMBER_OF_YEARS = 5;
+
         protected enum Month
         {
             January = 1,
@@ -95,7 +97,7 @@ namespace HolidayGen
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
 
-            for (int i = DateTime.Now.Year; i < DateTime.Now.Year + 10; i++)
+            for (int i = DateTime.Now.Year; i < DateTime.Now.Year + NUMBER_OF_YEARS; i++)
             {
                 DateTime dt = NthOf(new DateTime(i, month, 1), occurance, dayOfWeek);
                 dict.Add(dt.Month + "/" + dt.Day + "/" + dt.Year, holidayTitle);

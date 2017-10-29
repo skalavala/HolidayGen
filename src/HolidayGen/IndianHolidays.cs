@@ -20,17 +20,23 @@ namespace HolidayGen
         {
             Dictionary<string, string> indianHolidays = new Dictionary<string, string>(16);
             indianHolidays.Add("1/1", "New Year");
-            indianHolidays.Add("11/2", "Diwali");
-            indianHolidays.Add("9/10", "Dussehra");
+            indianHolidays.Add("1/14", "Sankranthi");
+            indianHolidays.Add("1/26", "Republic Day");
+            indianHolidays.Add("3/1", "Holi");
+            indianHolidays.Add("3/18", "Ugadi");
+            indianHolidays.Add("3/25", "Srirama Navami");
+            indianHolidays.Add("8/15", "Independence Day");
+            indianHolidays.Add("9/3", "Janmastami");
+            indianHolidays.Add("10/02", "Gandhi's Birthday");
+            indianHolidays.Add("10/17", "Durga Astami");
+            indianHolidays.Add("10/19", "Dussehra");
+            indianHolidays.Add("11/07", "Diwali");
             return indianHolidays;
         }
 
         protected override Dictionary<string, string> PopulateDynamicHolidays()
         {
             Dictionary<string, string> indianHolidays = new Dictionary<string, string>(16);
-            indianHolidays.Add("1/1", "New Year");
-            indianHolidays.Add("11/2", "Diwali");
-            indianHolidays.Add("9/10", "Dussehra");
             return indianHolidays;
         }
     }
