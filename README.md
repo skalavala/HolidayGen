@@ -15,11 +15,12 @@ The code is extensible, and you can add other country's holidays just as easily.
 * Extremely simple design - Just one class to implement
 * The Base class `Holiday` is an abstract class with some base functionality already built-in
 * The implemented class (for ex: `UKHolidays`) implements the following required three methods:
-  * `GetName()`
-  * `PopulateStaticHolidays()`
-  * `PopulateDynamicHolidays()`
+  * `GetName() returns name of the implemented class that should go into JSON`
+  * `PopulateStaticHolidays() returns a Dictionary of holidays `
+  * `PopulateDynamicHolidays() returns a Dictionary of holidays`
 
-`PopulateStaticHolidays()` method simply returns a bunch of hard coded dictionary item ( date and title)
+`GetName()` returns a name of the holidays list - for ex: `UK_HOLIDAYS`.
+`PopulateStaticHolidays()` method simply returns a bunch of hard coded dictionary items (date and title)
 `PopulateDynamicHolidays()` method has most of the logic to return appropriate holidays based on some `dynamic` logic
 
 The base class has a method `GetHolidayList()` that takes a few parameters like `month`, `occurance`, `DayOfWeek` and `title` that gives a bunch fo holidays list for a known pattern... for ex: To get the exact date of a holiday that occurs  Every 3rd Tuesday of August, you can pass a few parameters, and it does the job for you.
