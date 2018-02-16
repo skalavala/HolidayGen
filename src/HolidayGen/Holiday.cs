@@ -9,6 +9,7 @@
                     - PopulateStaticHolidays returns a dict - date and title
                     - PopulateDynamicHolidays returns a dict - date and title
 ******************************************************************************/
+
 using System;
 using System.Collections.Generic;
 
